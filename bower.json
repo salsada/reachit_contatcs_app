@@ -1,0 +1,19 @@
+{
+  "name": "contactsapp",
+  "description": "Open Source Web Development with the MEAN Stack Project - CPCC -REACHIT Spring 2016",
+  "main": "server.js",
+  "authors": [
+    "Alberto Botero <alberto.botero@cpcc>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+    "jquery": "^2.2.1",
+    "toastr": "^2.1.2",
+    "angular": "^1.5.0",
+    "angular-resource": "^1.5.0",
+    "angular-route": "^1.5.0"
+  }
+}
