@@ -8,7 +8,7 @@ var contactSchema = mongoose.Schema({
 
 var Contact = mongoose.model('Contact', contactSchema);
 
-function CreateDefaultContacts () {
+function createDefaultContacts () {
     Contact.find({}).exec(function (err, collection){
         if(collection.length === 0) {
             Contact.create({firstName: 'Alberto', lastName: 'Botero', email: 'alberto.botero@cpcc.edu'});
@@ -17,3 +17,5 @@ function CreateDefaultContacts () {
         }
     })
 }
+
+exports.createDefaultContacts = createDefaultContacts;

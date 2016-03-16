@@ -1,13 +1,13 @@
 var mongoose = require('mongoose'),
-    contactModel = require('../models/contact');
+    contactModel = require('../models/Contact');
 
 module.exports = function (config) {
     mongoose.connect(config.db);
     var db = mongoose.connection;
     db.on('error', console.error.bind(console, 'connection error...'));
     db.once('open', function callback() {
-        console.log('reactit_project db opened');
+        console.log('reachit_project db opened');
     });
 
-    contactModel.CreateDefaultContacts();
-}
+    contactModel.createDefaultContacts();
+};
