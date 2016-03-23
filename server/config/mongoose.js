@@ -1,5 +1,6 @@
 var mongoose = require('mongoose'),
-    contactModel = require('../models/Contact');
+    contactModel = require('../models/Contact'),
+    postModel = require('../models/Post');
 
 module.exports = function (config) {
     mongoose.connect(config.db);
@@ -10,4 +11,5 @@ module.exports = function (config) {
     });
 
     contactModel.createDefaultContacts();
+    postModel.createdDefaultPosts();
 };

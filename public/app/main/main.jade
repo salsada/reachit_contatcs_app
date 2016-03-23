@@ -1,4 +1,15 @@
 container
+    h1 REACH-IT Contacts Application
     .jumbotron
-        h1 REACH-IT Contacts Application
-        p Welcome to REACH-IT Contacts! The easy way to get in contact with your class mates and instructors
+        .carousel.slide(id='postsCarousel', data-ride='carousel')
+            ol.carousel-indicators
+                li(data-target='#postsCarousel', ng-repeat='post in posts', data-slide-to='posts.indexOf(post)')
+            .carousel-inner(role='listbox')
+                .item(ng-repeat='post in posts')
+                    h5 {{post.title}}
+                    p {{post.content}}
+            a.left.carousel-control(href='#postsCarousel', role='button', data-slide='prev')
+                span.glyphicon.glyphicon-chevron-left
+            a.right.carousel-control(href='#postsCarousel', role='button', data-slide='next')
+                span.glyphicon.glyphicon-chevron-right
+    p Welcome to REACH-IT Contacts! The easy way to get in contact with your class mates and instructors
