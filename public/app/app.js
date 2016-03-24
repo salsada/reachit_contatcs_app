@@ -5,4 +5,7 @@ angular.module('app').config(function ($routeProvider, $locationProvider) {
 
     $routeProvider
         .when('/', { templateUrl: '/partials/main/main', controller: 'mvMainCtrl'})
+        .when('/contacts', { templateUrl: '/partials/contacts/contactsList', controller: 'mvContactsListCtrl'})
+        .when('/contacts/:_id', { templateUrl: '/partials/contacts/contactDetails', controller: 'mvContactDetailsCtrl'})
+
 });

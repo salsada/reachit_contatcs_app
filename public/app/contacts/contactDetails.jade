@@ -1,0 +1,11 @@
+.container
+    h1 Contact Details
+    .row
+        label.col-md-2(for='firstName') First Name:
+        input(type='text', id='firstName', ng-model='contact.firstName')
+    .row
+        label.col-md-2(for='lastName') Last Name:
+        input(type='text', id='lastName', ng-model='contact.lastName')
+    .row
+        label.col-md-2(for='email') email:
+        input(type='email', id='email', ng-model='contact.email')

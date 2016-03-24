@@ -1,0 +1,13 @@
+.container
+    h1 REACH-IT Contacts
+    table.table.table-striped.table-condensed.table-hover
+        thead
+            th First Name
+            th Last Name
+            th Email
+        tbody
+            tr(ng-repeat='contact in contacts')
+                td {{contact.firstName}}
+                td {{contact.lastName}}
+                td
+                    a(href='/contacts/{{contact._id}}') {{contact.email}}
