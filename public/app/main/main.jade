@@ -1,13 +1,19 @@
-container
+.container
     h1 REACH-IT Contacts Application
     .jumbotron
         .carousel.slide(id='postsCarousel', data-ride='carousel')
             ol.carousel-indicators
-                li(data-target='#postsCarousel', ng-repeat='post in posts')
+                li.active(data-target='#postsCarousel', data-slide-to='0')
+                li(data-target='#postsCarousel', data-slide-to='1')
             .carousel-inner(role='listbox')
-                .item(ng-repeat='post in posts')
-                    h5 {{post.title}}
-                    p {{post.content}}
+                .item.active
+                    .col-md-offset-3.col-md-6
+                        h2 {{posts[0].title}}
+                        p {{posts[0].content}}
+                .item
+                    .col-md-offset-3.col-md-6
+                        h2 {{posts[1].title}}
+                        p {{posts[1].content}}
             a.left.carousel-control(href='#postsCarousel', role='button', data-slide='prev')
                 span.glyphicon.glyphicon-chevron-left
             a.right.carousel-control(href='#postsCarousel', role='button', data-slide='next')

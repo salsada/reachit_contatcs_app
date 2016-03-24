@@ -1,11 +1,22 @@
 .container
-    h1 Contact Details
-    .row
-        label.col-md-2(for='firstName') First Name:
-        input(type='text', id='firstName', ng-model='contact.firstName')
-    .row
-        label.col-md-2(for='lastName') Last Name:
-        input(type='text', id='lastName', ng-model='contact.lastName')
-    .row
-        label.col-md-2(for='email') email:
-        input(type='email', id='email', ng-model='contact.email')
+    .well
+        form.form-horizontal(name='contactDetails')
+            fieldset
+                legend Contact Details
+
+                .form-group
+                    label.col-md-2.control-label(for='firstName') First Name:
+                    .col-md-10
+                        input(type='text', id='firstName', ng-model='contact.firstName', ng-readonly='!(inEditMode)', required)
+                .form-group
+                    label.col-md-2.control-label(for='lastName') Last Name:
+                    .col-md-10
+                        input(type='text', id='lastName', ng-model='contact.lastName', ng-readonly='!(inEditMode)', required)
+                .form-group
+                    label.col-md-2.control-label(for='email') email:
+                    .col-md-10
+                        input(type='email', id='email', ng-model='contact.email', ng-readonly='!(inEditMode)', required)
+                .form-group
+                    .col-md-2.col-md-offset-3
+                        .pull-right
+                            a.btn.btn-default(href='/contacts') Go Back
